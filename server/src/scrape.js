@@ -78,7 +78,7 @@ async function fetchRatSitzungen() {
       const topsContainer = t('#smc_page_to0040_contenttable1 > tbody > tr');
 
       for (let j = 0; j < topsContainer.length; j += 1) {
-        const topsTrs = t(topsContainer[j]).find('td.smc_topht').text();
+        const topsTrs = t(topsContainer[j]).find('td.smc_topht').text().trim();
         if (topsTrs !== '') {
           tops.push(topsTrs);
         }
